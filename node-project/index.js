@@ -78,7 +78,7 @@ app.patch("/order/:id", checkUserId,checkMethod, (request, response)=>{
 
     const finishedOrder = {id, order, clientName, price, status: "Pronto"}
     orders[index] = finishedOrder
-    return response.status(204).json(finishedOrder)
+    return response.status(200).json(finishedOrder)
 })
 
 app.listen(port,()=>{
